@@ -1,5 +1,6 @@
 package com.example.proyectobase
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -24,6 +25,7 @@ class MainActivity4 : AppCompatActivity() {
         val spnCalculadora : Spinner = findViewById(R.id.spCalculadora)
         val btnCalcular : Button = findViewById(R.id.btn_calcular)
         val tvResultado : TextView = findViewById(R.id.tv_resultado)
+        val btnLimpiarPantalla : Button = findViewById(R.id.btnLimpiar)
 
         // array para el elementos del spinner
         val menuOpciones = arrayOf("Sumar", "Restar", "Multiplicar", "Dividir")
@@ -36,9 +38,13 @@ class MainActivity4 : AppCompatActivity() {
             var valorNumero: Int = recibeNumero.text.toString().toIntOrNull() ?:0
             var valorNumero2: Int = recibeNumero2.text.toString().toIntOrNull() ?:0
 
-            var resultado = OperacionesMatematicas.sumarNumeros(valorNumero, valorNumero2)
+            var resultado = OperacionesMatematicas.dividirNumeros(valorNumero, valorNumero2)
             tvResultado.text = resultado.toString()
 
+        }
+
+        btnLimpiarPantalla.setOnClickListener{
+            // agregar logica pa limpiar
         }
 
 
