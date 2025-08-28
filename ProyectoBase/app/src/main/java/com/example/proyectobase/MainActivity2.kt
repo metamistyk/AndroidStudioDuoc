@@ -31,6 +31,14 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(nuevaVentana)
         }
 
+        val btnCalculadora : Button = findViewById(R.id.btn_calculadora)
+
+        btnCalculadora.setOnClickListener{
+            val ventanaCalculadora = Intent(this, MainActivity4::class.java)
+            startActivity(ventanaCalculadora)
+        }
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
