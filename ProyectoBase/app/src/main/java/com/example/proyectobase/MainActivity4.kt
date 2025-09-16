@@ -26,6 +26,7 @@ class MainActivity4 : AppCompatActivity() {
         val btnCalcular : Button = findViewById(R.id.btn_calcular)
         val tvResultado : TextView = findViewById(R.id.tv_resultado)
         val btnLimpiarPantalla : Button = findViewById(R.id.btnLimpiar)
+        val btnNext : Button = findViewById(R.id.btnNext)
 
         // array para el elementos del spinner
         val menuOpciones = arrayOf("Sumar", "Restar", "Multiplicar", "Dividir")
@@ -45,6 +46,11 @@ class MainActivity4 : AppCompatActivity() {
 
         btnLimpiarPantalla.setOnClickListener{
             // agregar logica pa limpiar
+        }
+
+        btnNext.setOnClickListener {
+            val intent2 = Intent(this, MainActivity5::class.java)
+            startActivity(intent2)
         }
 
 
